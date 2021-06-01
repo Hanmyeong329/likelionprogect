@@ -1,0 +1,12 @@
+<h1>Update Your Information</h1>
+<form action="{%url 'update' sign.id%}" method="post">
+    {%csrf_token%}
+    이름:<input type="text" name="name" value="{{sign.name}}">
+    <br>
+    나이: <input type="text" name="age" value="{{sign.age}}">
+    <br>
+    이메일: <input type="text" name="email" value="{{sign.email}}">
+    <br>
+    자기소개: <textarea name="introduce" cols="60" rows="10">{{sign.introduce}}</textarea>
+    <button type="submit">update</button>
+</form>
